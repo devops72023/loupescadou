@@ -4,7 +4,7 @@ import logo from '../../../assets/logo.png'
 import { AppContext } from '../../../App'
 
 function Menu() {
-    const { activeTab, setActiveTab, isAuth } = useContext(AppContext)
+    const { activeTab, setActiveTab, isAuth, setLoaded, setIsBasketOpen, basket } = useContext(AppContext)
     const tabs = [
         { to : '/', txt : 'Accueil'},
         { to : '/histoire', txt : 'Notre Histoire'},
@@ -14,6 +14,7 @@ function Menu() {
     
     const handleTabs = (activeTab) => {
         setActiveTab(activeTab)
+        setLoaded(false)
     }
     return (
         <div className="w-full flex @container/menu px-5">
@@ -34,11 +35,11 @@ function Menu() {
                 {
                 !isAuth && (
                     <>
-                    <Link onClick={() => handleTabs('Connexion')} to="/Login" className={` ${activeTab == 'Connexion' && 'activeItem'} h-fit`} >
+                    <Link onClick={() => handleTabs('Connexion')} to="/login" className={` ${activeTab == 'Connexion' && 'activeItem'} h-fit`} >
                         <h4 className="font-dancing text-light-blue-100 transition-all hover:text-light-blue-400">Connexion</h4>
                     </Link>
 
-                    <Link onClick={() => handleTabs('Sinscrire')} to="/Signup" className={` ${activeTab == 'Sinscrire' && 'activeItem'} h-fit`} >
+                    <Link onClick={() => handleTabs('Sinscrire')} to="/register" className={` ${activeTab == 'Sinscrire' && 'activeItem'} h-fit`} >
                         <h4 className="font-dancing text-light-blue-100 transition-all hover:text-light-blue-400">Sinscrire</h4>
                     </Link>
                     </>
@@ -48,12 +49,12 @@ function Menu() {
                 <div className="flex gap-4 justify-center items-center bg-white py-2 px-3 rounded-xl mr-3">
                 <div
                     className="text-[#79c8f5] cursor-pointer relative baskect"
-                    onClick={() => dispatch(openBasket({ toggled: true }))}
+                    onClick={() => setIsBasketOpen(true)}
                 >
                     <i className="fa-solid fa-cart-shopping transition-all hover:text-light-blue-700" style={{fontSize:'20px'}}></i>
-                    {5 > 0 && (
+                    {basket.length > 0 && (
                     <div className="rounded-full w-5 h-5 bg-[#f07e86] text-white text-xs flex justify-center items-center absolute -top-2 -right-3">
-                        <p>{5}</p>
+                        <p>{basket.length}</p>
                     </div>
                     )}
                 </div>

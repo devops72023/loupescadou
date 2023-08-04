@@ -27,3 +27,7 @@
   filter: blur(0);
   opacity: 1;
 }
+
+.trasnition-500{
+  transition: all .5s ease;
+}

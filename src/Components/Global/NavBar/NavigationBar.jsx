@@ -5,7 +5,7 @@ import Menu from './Menu'
 
 const NavigationBar = () => {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col fixed top-0 left-0 w-full z-40">
         <TopPart />
         <Menu />
     </div>
