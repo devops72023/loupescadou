@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../App'
+import { Link } from 'react-router-dom'
 
 function SideBar() {
     const { currentUser, setIsAuth } = useContext(AppContext)
     const logout = () => {
         localStorage.removeItem('jwt')
-        setIsAuth(false)
+        location.reload()
     }
   return (
     <div className='flex flex-col space-y-5 min-w-[200px] md:space-y-10 w-full md:w-1/3 font-poppins text-white border-b md:border-b-0 md:border-r border-gray-300'>
@@ -19,15 +20,19 @@ function SideBar() {
 
       <ul className='flex md:flex-col justify-between space-x-3 md:space-x-0 rounded py-2 md:space-y-5 w-full md:px-5' >
 
-          <li onClick={() => {}} className='w-1/3 md:w-full cursor-pointer hover:text-white duration-300 flex flex-col md:flex-row items-center text-gray-50 space-y-1 md:space-x-2' >
+          <Link
+            to='/user-profile'
+            className='w-1/3 md:w-full cursor-pointer hover:text-white duration-300 flex flex-col md:flex-row items-center text-gray-50 space-y-1 md:space-x-2' >
               <i className='fa-regular fa-user md:text-2xl'></i>
               <p className='text-center text-xs md:text-base md:text-left'>Modifier Profile</p>
-          </li>
+          </Link>
 
-          <li className='w-1/3 md:w-full cursor-pointer hover:text-white duration-300 flex flex-col md:flex-row items-center text-gray-50 space-y-1 md:space-x-2' >
+          <Link
+            to='/'
+            className='w-1/3 md:w-full cursor-pointer hover:text-white duration-300 flex flex-col md:flex-row items-center text-gray-50 space-y-1 md:space-x-2' >
               <i className='fa-solid fa-cube md:text-2xl'></i>
               <p className='text-center text-[11px] md:text-base md:text-left' onClick={() => router.push('/userProfile/orders')} >Mes Commandes</p>
-          </li>
+          </Link>
 
           <li onClick={logout} className='w-1/3 md:w-full cursor-pointer hover:text-white duration-300 flex flex-col md:flex-row items-center text-gray-50 space-y-1 md:space-x-2' >
               <i className='fa-solid fa-right-from-bracket md:text-2xl'></i>
