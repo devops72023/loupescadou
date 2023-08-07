@@ -29,7 +29,6 @@ const ProductCard = ({product, delay}) => {
     }
   return (
     <motion.li 
-        onClick={()=>{navigate('/products/'+product._id)}}
         initial={{scale: 0, opacity: 0}}
         animate={{scale: 1, opacity: 1}}
         transition={{duration: .3, delay: delay}}
@@ -44,10 +43,12 @@ const ProductCard = ({product, delay}) => {
            <i className="fa-solid active:scale-75 text-gray-800 border rounded-full p-2 border-gray-800 duration-300 cursor-pointer hover:shadow fa-bag-shopping"></i>   
         </div>
 
-        <img onClick={() => router.push(`/Product/${product.title}`)} src={ `${import.meta.env.VITE_ASSETS}/Products-images/${product.photo}` } className='group-hover:scale-105 duration-300 md:h-36 w-full rounded items-center object-fill justify-center' alt="" />
+        <img onClick={()=>{navigate('/products/'+product._id)}} src={ `${import.meta.env.VITE_ASSETS}/Products-images/${product.photo}` } className='group-hover:scale-105 duration-300 md:h-36 w-full rounded items-center object-fill justify-center' alt="" />
 
         <div className='flex flex-col items-center w-full space-y-4 ' >
-            <h1 className='text-gray-100 cursor-pointer text-3xl text-center w-full rounded-full line-clamp-1' >{ product.title }</h1>
+            <h1 
+                onClick={()=>{navigate('/products/'+product._id)}}
+                className='text-gray-100 cursor-pointer text-3xl text-center w-full rounded-full line-clamp-1' >{ product.title }</h1>
             <p className='text-gray-100 font-poppins text-xs line-clamp-2' >{ product.description }</p>
             <button onClick={addItemToBasket} className='font-poppins text-sm bg-white w-full py-2 active:scale-75 duration-300 border rounded-full text-gray-800' >
                 AJOUTER AU PANIER
