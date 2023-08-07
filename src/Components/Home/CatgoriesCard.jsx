@@ -9,6 +9,7 @@ const Card = ({category, animatedFish, setAnimatedFish, one=false}) => {
       });
     return (
         <Link
+            to={`/categories/${category._id}`}
             ref={card}
             className={
                 one

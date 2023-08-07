@@ -73,7 +73,7 @@ function Profile() {
 
   return (
     <div className="w-full min-h-[300px] flex justify-center items-center @container/profile">
-      <div className="glass w-[85%]  min-h-[300px] mx-auto rounded-xl px-6 py-3 flex flex-col gap-6 @[760px]/profile:flex-row">
+      <div className="glass w-[90%]  min-h-[300px] mx-auto rounded-xl px-6 py-3 flex flex-col gap-6 @[760px]/profile:flex-row">
         <SideBar />
         <div className="flex flex-col w-full">
           <h1 className="font-bold text-center text-3xl text-gray-50">

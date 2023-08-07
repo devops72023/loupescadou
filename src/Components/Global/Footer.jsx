@@ -7,7 +7,7 @@ const Footer = () => {
   const isFooterInView = useInView(footerRef);
   return (
     <motion.div 
-      className="text-white glass bottom-0 font-sans mt-5 mb-3 w-[85%] m-auto rounded-[20px]"
+      className="text-white glass bottom-0 font-sans mt-5 mb-[100px] w-[90%] m-auto rounded-[20px] md:mb-3"
       ref={footerRef}
       animate={isFooterInView ? bottomFadeIn : {}}
     >

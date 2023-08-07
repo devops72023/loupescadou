@@ -12,6 +12,9 @@ import ProtectedRoute from './Components/Global/Protected';
 import Register from './Components/Auth/Register';
 import Locked from './Components/Auth/LockedRoute';
 import Profile from './Profile/Profile';
+import Category from './Components/Category/Category';
+import Product from './Components/Product/Product';
+import Call from './Components/Call/Call';
 
 const AppContext = createContext()
 const AppProvider = ({children})=>{
@@ -90,7 +93,9 @@ function App() {
             <Route element={<BackgroundLayout />}>
               <Route element={<NavbarLayout />}>
                 <Route path='/' element={<Home />} />
-                <Route path='/about' element={<h1>About us</h1>} />
+                <Route path='/categories/:id' element={<Category />} />
+                <Route path='/products/:id' element={<Product />} />
+                <Route path='/call' element={<Call />} />
                 {/* these two routes are locked when the user is logged in */}
                 <Route element={<Locked />}>
                   <Route path='/login' element={<Login />} />
