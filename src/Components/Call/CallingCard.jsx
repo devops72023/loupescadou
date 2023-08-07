@@ -16,17 +16,17 @@ function CallingCard() {
         <i className="fas fa-phone-volume"></i>
         Call Now
       </motion.button>
-      <div class="flex items-center space-x-10">
-        <div class="flex flex-col items-start space-y-2 font-poppins">
+      <div className="flex items-center space-x-10">
+        <div className="flex flex-col items-start space-y-2 font-poppins">
           <span>Up to</span>
-          <strong class="text-5xl">
+          <strong className="text-5xl">
             <CountUp end={120} duration={3} />
           </strong>
           <span>Call per Day</span>
         </div>
-        <div class="flex flex-col items-start space-y-2">
+        <div className="flex flex-col items-start space-y-2">
           <span>Up to</span>
-          <strong class="text-5xl">
+          <strong className="text-5xl">
             <CountUp end={98} duration={3} />
           </strong>
           <span>Sales per Day</span>
