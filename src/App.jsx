@@ -15,6 +15,7 @@ import Profile from './Profile/Profile';
 import Category from './Components/Category/Category';
 import Product from './Components/Product/Product';
 import Call from './Components/Call/Call';
+import NotreHistoire from './Components/NotreHistoire/NotreHistoire';
 
 const AppContext = createContext()
 const AppProvider = ({children})=>{
@@ -93,6 +94,7 @@ function App() {
             <Route element={<BackgroundLayout />}>
               <Route element={<NavbarLayout />}>
                 <Route path='/' element={<Home />} />
+                <Route path='/notre-histoire' element={<NotreHistoire />} />
                 <Route path='/categories/:id' element={<Category />} />
                 <Route path='/products/:id' element={<Product />} />
                 <Route path='/call' element={<Call />} />

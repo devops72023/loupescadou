@@ -7,7 +7,7 @@ function Menu() {
     const { activeTab, setActiveTab, isAuth, setLoaded, setIsBasketOpen, basket } = useContext(AppContext)
     const tabs = [
         { to : '/', txt : 'Accueil'},
-        { to : '/histoire', txt : 'Notre Histoire'},
+        { to : '/notre-histoire', txt : 'Notre Histoire'},
         { to : '/call', txt : 'Vente en ligne'},
         { to : '/quoi-De-Neuf', txt : 'Quoi de neuf'},
       ]

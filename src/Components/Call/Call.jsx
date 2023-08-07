@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PositionPicker from './PositionPicker';
+import CallingCard from './CallingCard';
 
 function Call() {
     const [ socket, setSocket ] = useState({emit: ()=>{}});
@@ -11,6 +12,7 @@ function Call() {
   async function getAdmin() {
     const req = await fetch(`${import.meta.env.VITE_API}/availableAdmin`);
     return await req.json();
+
   }
   useEffect(() => {
     if ("geolocation" in navigator) {
@@ -43,11 +45,9 @@ function Call() {
   }, []);
   return (
     <div className='w-full flex justify-center items-center'>
-        <div className="w-[85%] max-w-[1434px] flex gap-5 mx-auto">
-            <div className="w-full">
-                
-            </div>
-            <div className="w-full">
+        <div className="w-[85%] max-w-[1434px] flex gap-5 mx-auto py-8 px-4 flex-col md:flex-row">
+            <CallingCard />
+            <div className="w-full flex - justify-center items-center">
                 <PositionPicker 
                     POSITION={position } 
                     className="w-full aspect-[5/4] max-w-[400px] rounded-lg"/>
