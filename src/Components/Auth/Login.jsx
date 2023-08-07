@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import SpinningToast from "../Global/SpinningToast";
 
 const Login = () => {
-  const { loaded, setLoaded, setIsAuth } = useContext(AppContext);
+  const { loaded, setLoaded, setIsAuth, setCurrentUser } = useContext(AppContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -54,6 +54,7 @@ const Login = () => {
         }
         if (res.accessToken != undefined) {
           localStorage.setItem("jwt", res.accessToken);
+          setCurrentUser(res.user)
           setIsAuth(true);
           toast.update(toastId, {
             render: "Bienvenue de nouveau !",
