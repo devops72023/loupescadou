@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ProtectedRoute from './Components/Global/Protected';
 import Register from './Components/Auth/Register';
 import Locked from './Components/Auth/LockedRoute';
-import Profile from './Profile/Profile';
+import Profile from './Components/Profile/Profile';
 import Category from './Components/Category/Category';
 import Product from './Components/Product/Product';
 import Call from './Components/Call/Call';
@@ -95,6 +95,7 @@ function App() {
               <Route element={<NavbarLayout />}>
                 <Route path='/' element={<Home />} />
                 <Route path='/notre-histoire' element={<NotreHistoire />} />
+                <Route path='/quoi-de-neuf' element={<NotreHistoire />} />
                 <Route path='/categories/:id' element={<Category />} />
                 <Route path='/products/:id' element={<Product />} />
                 <Route path='/call' element={<Call />} />

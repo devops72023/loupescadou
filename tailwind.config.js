@@ -13,6 +13,13 @@ export default {
         'dancing' : ['Dancing Script', 'cursive']
       },
       colors: {
+        colors: {
+          light: '#f1f6f8',
+          blue: '#000C6E',
+          lightblue: '#4F9CC9',
+          blueAccent: '#2634A4',
+          bgcolor: '#DCECF5',
+        },
         "dark-blue": {
           100: "#cecedf",
           200: "#9d9dbf",

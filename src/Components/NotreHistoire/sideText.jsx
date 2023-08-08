@@ -3,7 +3,7 @@ import React from "react";
 export default function SideText({ title, slogan, para }) {
   return (
     <div className="w-full space-y-5 ">
-      <h1 className="flex flex flex-wrap space-x-3 text-5xl font-oregano text-blue-300 ">
+      <h1 className="flex flex-wrap space-x-3 text-5xl font-oregano text-blue-300 ">
         <div className="h-15 w-2 bg-blue-600 " />
         <span className="text-blue-700">Notre </span>
         <p>histoire</p>

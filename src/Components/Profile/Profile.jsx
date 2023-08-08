@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import { AppContext } from "../App";
+import { AppContext } from "../../App";
 import SideBar from "./SideBar";
 import { toast } from "react-toastify";
-import SpinningToast from "../Components/Global/SpinningToast";
+import SpinningToast from "../Global/SpinningToast";
 
 function Profile() {
   const { currentUser, setCurrentUser } = useContext(AppContext);

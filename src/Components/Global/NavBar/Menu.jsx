@@ -9,7 +9,7 @@ function Menu() {
         { to : '/', txt : 'Accueil'},
         { to : '/notre-histoire', txt : 'Notre Histoire'},
         { to : '/call', txt : 'Vente en ligne'},
-        { to : '/quoi-De-Neuf', txt : 'Quoi de neuf'},
+        { to : '/quoi-de-neuf', txt : 'Quoi de neuf'},
       ]
     
     const handleTabs = (activeTab) => {
@@ -34,16 +34,9 @@ function Menu() {
                 }
                 {
                 !isAuth && (
-                    <>
-                    <Link onClick={() => handleTabs('Connexion')} to="/login" className={` ${activeTab == 'Connexion' && 'activeItem'} h-fit`} >
+                    <Link onClick={() => handleTabs('Connexion')} to="/login" className={` ${(activeTab == 'Connexion' || activeTab == "Sinscrire") && 'activeItem'} h-fit`} >
                         <h4 className="font-dancing text-light-blue-100 transition-all hover:text-light-blue-400">Connexion</h4>
                     </Link>
-
-                    <Link onClick={() => handleTabs('Sinscrire')} to="/register" className={` ${activeTab == 'Sinscrire' && 'activeItem'} h-fit`} >
-                        <h4 className="font-dancing text-light-blue-100 transition-all hover:text-light-blue-400">Sinscrire</h4>
-                    </Link>
-                    </>
-
                 )
                 }
                 <div className="flex gap-4 justify-center items-center bg-white py-2 px-3 rounded-xl mr-3">
