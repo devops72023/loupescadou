@@ -10,8 +10,9 @@ function CallingCard(props) {
   }
   const call = async () => {
     if (isCalling) return;
+    const admin = await getAdmin();
+    if (!admin.available) return;
     setIsCalling(true);
-    const admin = await getAdmin(); 
     socket.emit("call", { from: socket.id, to: admin.socket });
     const constraints = { video: true, audio: true };
     try {
