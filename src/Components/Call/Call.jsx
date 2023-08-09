@@ -3,10 +3,11 @@ import PositionPicker from "./PositionPicker";
 import CallingCard from "./CallingCard";
 import VideoCall from "./VideoCall";
 import WaitingCard from "./WaitingCard";
-import io from 'socket.io-client'
+import { Manager } from 'socket.io-client'
 
-const socket = io(import.meta.env.VITE_SOCKET)
+const manager = new Manager(import.meta.env.VITE_SOCKET)
 function Call() {
+  const socket = manager.socket('/')
   const [isCalling, setIsCalling] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
   const [ from, setFrom ] = useState('');
