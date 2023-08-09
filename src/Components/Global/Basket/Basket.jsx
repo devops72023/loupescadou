@@ -5,6 +5,7 @@ import BasketItem from "./BasketItem";
 import { loadStripe } from "@stripe/stripe-js";
 import { toast } from "react-toastify";
 import basketImage from '../../../assets/Basket-icons/basket.png'
+import emptyBasket from '../../../assets/Basket-icons/emptyBasket.png'
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE);
 
@@ -109,7 +110,7 @@ function Basket() {
             transition={{ ease: "easeOut", duration: 0.4 }}
             className="w-full h-full flex flex-col justify-center items-center"
           >
-            <img src="/src/assets/Basket-icons/emptyBasket.png" alt="" />
+            <img src={emptyBasket} alt="" />
             <p className="text-white text-3xl sm:text-3xl font-bold px-20 sm:px-20 text-center w-full">
               Your basket is empty for now
             </p>
