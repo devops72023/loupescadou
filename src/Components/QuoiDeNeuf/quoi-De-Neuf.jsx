@@ -2,7 +2,7 @@ import SideText from "./SideText/sideText";
 import SliderMobile from "./Slider/SliderMobile";
 import Slider from "./Slider/Slider";
 
-import '../../assets/styles/slider.css';
+import '../../assets/styles/Slider.css';
 // import '../../assets/styles/slide.css';
 // import '../../assets/styles/SideText.css';
 // import '../../assets/styles/quoiDeNeuf.css';
