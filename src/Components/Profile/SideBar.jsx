@@ -28,7 +28,7 @@ function SideBar() {
           </Link>
 
           <Link
-            to='/'
+            to='/user-profile/orders'
             className='w-1/3 md:w-full cursor-pointer hover:text-white duration-300 flex flex-col md:flex-row items-center text-gray-50 space-y-1 md:space-x-2' >
               <i className='fa-solid fa-cube md:text-2xl'></i>
               <p className='text-center text-[11px] md:text-base md:text-left' onClick={() => router.push('/userProfile/orders')} >Mes Commandes</p>

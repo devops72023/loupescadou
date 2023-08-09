@@ -1,0 +1,47 @@
+.glass{
+    background: rgba( 255, 255, 255, 0.1 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.stroke-link{
+    text-stroke: 0.2px #0b0960;
+    -webkit-text-stroke: 0.2px #0b0960;
+}
+.custom-btn{
+    color: #79c8f5;
+    position: relative;
+    height: 50px;
+    width: 150px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: 0.3s;
+    z-index: 1;
+    background-color: #fff;
+    overflow: hidden;
+}
+.custom-btn::before{
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    background-color: #0b0960;
+    z-index: -1;
+    border-radius: 50%;
+}
+.custom-btn:hover{
+    color: #fff;
+    border: 1px solid #fff;
+}
+.custom-btn:hover::before{
+    height: 160px;
+    width: 160px;
+}

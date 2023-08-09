@@ -1,0 +1,84 @@
+@media (max-width:1600px) {
+    .icone1{
+        position: relative;
+        top: 2rem;
+        left: 12.9rem;
+    }
+    .icone2{
+        position: relative;
+        top: 6rem;
+        left: 74.97rem;
+    }
+    .icone3{
+        position: relative;
+        bottom: 47rem;
+        left: 56rem;
+    }
+}
+
+@media (max-width:1300px) {
+   .Footer2{
+        position: relative;
+        top: 24rem;
+    }
+    .imgCircle1 {
+        top: 0rem;        
+    }
+   .icone1{
+        position: relative;
+        top: -1rem;
+        left: -1.1rem;
+    }
+    .icone2{
+        position: relative;
+        top: 6rem;
+        left: 54.97rem;
+    }
+    .icone3{
+        position: relative;
+        bottom: 49rem;
+        left: 34rem;
+    }
+}
+
+.imgCircle1 {
+    float: right;
+    width: 262rem;
+    height: 56rem;
+    shape-outside: circle(437.23% at 313.42% 338px);
+    -webkit-clip-path: circle(50% at 0%);
+    clip-path: circle(31.79% at 94.05% -367px);
+    background-color: white;
+    position: relative;
+    right: 0rem;
+    top: 2rem;
+    
+}
+
+.icone1{
+    position: absolute;
+    top: 2rem;
+    left: 49.9rem;
+    height: 9rem;
+    width: 11rem;
+    
+}
+
+.icone3{
+    position: absolute;
+    bottom: 48rem;
+    left: 91rem;
+    width: 10rem;
+    height: 8rem;
+    
+}
+
+.icone2{
+    position: absolute;
+    top: 6rem;
+    left: 110.97rem;
+    
+}
+
+/*background-image: linear-gradient(to bottom, rgb(248, 248, 248), rgba(248, 248, 248, 0.315), rgb(139, 141, 142));*/
+

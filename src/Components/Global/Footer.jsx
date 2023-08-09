@@ -1,13 +1,21 @@
 import { bottomFadeIn } from "./motion-animations";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Footer = () => {
   const footerRef = useRef(null);
   const isFooterInView = useInView(footerRef);
+  const [ settings, setSettings ] = useState({});
+  useEffect(()=>{
+    fetch(`${import.meta.env.VITE_API}/settings`)
+    .then(res => res.json())
+    .then(res => {
+      setSettings(res);
+    })
+  },[])
   return (
     <motion.div 
-      className="text-white glass bottom-0 font-sans mt-5 mb-[100px] w-[90%] m-auto rounded-[20px] md:mb-3"
+      className="text-white glass bottom-0 font-sans mt-5 mb-[100px] w-[90%] max-w-[1434px] m-auto rounded-[20px] md:mb-3"
       ref={footerRef}
       animate={isFooterInView ? bottomFadeIn : {}}
     >
@@ -16,14 +24,19 @@ const Footer = () => {
           <h3 className='text-2xl mb-3 font-["Dancing_Script"]'>Infos</h3>
           <a href="#" className="mb-2 hover:text-white hover:tracking-wide duration-300">
             <i className="fa-solid fa-location-dot me-2 text-lg"></i>
-            Lorem ipsum dolor sit amet.
+            {
+              settings.adresse ? settings.adresse : 'Lorem ipsum dolor sit amet.'
+            }
           </a>
           <a href="#" className="mb-2 hover:text-white hover:tracking-wide duration-300">
-            <i className="fa-solid fa-phone me-2 text-lg"></i>+ 00 000 000 000
+            <i className="fa-solid fa-phone me-2 text-lg"></i>{
+              settings.phone ? settings.phone : '+ 00 000 000 000' }
           </a>
           <a href="#" className="mb-2 hover:text-white hover:tracking-wide duration-300">
             <i className="fa-solid fa-envelope me-2 text-lg"></i>
-            contact@loupescadeau.com
+            {
+              settings.email ? settings.email : 'contact@loupescadeau.com'
+            }
           </a>
         </div>
 

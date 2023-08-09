@@ -1,0 +1,86 @@
+@media (max-width:1600px) {
+    .sideText{
+        position: absolute;
+        top: 29rem;
+        left: 3rem;
+    }
+}
+
+@media (max-width:1300px) {
+   .sideText{
+        position: absolute;
+        top: 49rem;
+        left: 5rem;
+   }
+}
+
+.sideText{
+    position: absolute;
+    top: 17rem;
+    left: 9rem;
+}
+
+.h1, .h2{
+    font-family: 'Dancing Script';
+}
+
+.h1{
+    font-size: 6rem;
+    color: #A0D8F8;
+    padding-bottom: 1rem;
+}
+
+.h2{
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+.para{
+    color: #fff;
+    font-size: 1.8rem;
+    width: 24.7rem;
+}
+
+.VenteBtn{
+    color: #79c8f5;
+    position: relative;
+    height: 50px;
+    top: 2rem;
+    width: 150px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: 0.3s;
+    z-index: 1;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.VenteBtn::before{
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    background-color: #0b0960;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.VenteBtn:hover{
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.VenteBtn:hover::before{
+    height: 160px;
+    width: 160px;
+}
+
+

@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backgroundImg {
+  background-image: url("../../public/assets/bg.png");
+}
+
+@layer components {
+
+  .glass{
+    background: rgba( 255, 255, 255, 0.1 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  .tab{
+    @apply py-3 cursor-pointer hover:text-sky-600 duration-300 md:w-1/5 md:text-center glass
+  }
+  .active{
+    @apply bg-white border-b-0 border-gray-100 md:w-1/5 py-3 px-3 text-sky-600 cursor-pointer hover:text-sky-600 duration-300 md:text-center
+  }
+
+  .sortItem {
+    @apply border glass hover:scale-105 active:scale-90  hover:border-sky-800 py-2 px-4 cursor-pointer hover:bg-sky-800  text-xs md:text-sm duration-300 rounded
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #686868;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0b0960;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body{
+  font-family: 'Dancing Script', cursive;
+}
+.custom-header{
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+@media (max-width:1600px) {
+  .custom-header{
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .slideshow{
+    position: absolute;
+    left: 42rem;
+    top: 13rem;
+  }
+ .arrow-buttons{
+    left: -19rem;
+  }
+  .sideText{
+    position: absolute;
+    top: 20rem;
+    left: 9rem;
+  }
+  .icone1{
+    position: relative;
+    top: 2rem;
+    left: 30.9rem;
+  }
+  .icone2{
+    position: relative;
+    top: 8rem;
+    left: 91.97rem;
+  }
+  .icone3{
+    position: relative;
+    bottom: 47rem;
+    left: 73rem;
+  }
+}
+@media (max-width:1300px) {
+  .custom-header{
+    padding-left: 100px;
+    padding-right: 100px;
+
+  }
+  .slideshow{
+    position: absolute;
+    left: 5rem;
+    top: 13rem;
+  }
+ .arrow-buttons{
+    left: -56rem;
+  }
+  .sideText{
+    position: absolute;
+    top: 49rem;
+    left: 5rem;
+  }
+  .Footer2{
+    position: relative;
+    top: 24rem;
+  }
+  .imgCircle1 {
+    top: 0rem;        
+  }
+  .icone1{
+    position: relative;
+    top: -1rem;
+    left: -1.1rem;
+  }
+  .icone2{
+    position: relative;
+    top: 6rem;
+    left: 54.97rem;
+  }
+  .icone3{
+    position: relative;
+    bottom: 49rem;
+    left: 34rem;
+  }
+}
+
+.navbar{
+  margin-top: auto;
+  border-radius: 1rem;
+  background-color: #000000;
+  opacity: 74.1%;
+  font-family: 'Dancing Script';
+  color: #fff;
+  position: relative;
+}
+
+.logo{
+  height: fit-content;
+  width: fit-content;
+  background: transparent;
+}
+
+.logoDiv{
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+.activeItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease;
+}
+.activeItem::before{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0%;
+  background: white;
+  bottom: 0;
+  transition: all .3s ease;
+
+}
+
+.icones{
+  background: #fff;
+  margin-right: 1rem;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 5px;
+  color: #254E99;
+  position: relative;
+  bottom: 0.6rem;
+  display: flex;
+}
+
+.icones svg{
+  margin-left: 0.6rem;
+}
+
+.circle{
+  margin: 1rem auto;
+  background-color: #fff;
+}
+
+.semi-circle {
+  width: 5rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 10rem 10rem 0 0;
+  position: relative;
+  top: 0.3rem;
+}
+
+.histoire{
+  position: relative;
+  top: 0.5rem;
+}
+
+.baskect{
+  position: relative;
+  top: 0.3rem;
+  left: 0.3rem;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}

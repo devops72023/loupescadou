@@ -1,0 +1,35 @@
+:root{
+    --radius:290px;
+}
+.fish-container{
+    width: var(--radius);
+    height: var(--radius);
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    font-family: 'Dancing Script', cursive;
+    transition: 1s;
+}
+.fish-container img{
+    max-width: calc(var(--radius) * 2.5) !important;
+    transition: 0.4s;
+}
+.fish-text-container{
+    width: calc(var(--radius) * 1.15) !important;
+    height: calc(var(--radius) * 1.15) !important;
+}
+.fish-text{
+    color: #fff;
+    font-size: 80px;
+    width: 200%;
+    text-align: center;
+    font-weight: bold;
+}
+@media (max-width: 767px) {
+    .fish-container img{
+        max-width: calc(var(--radius) * 1.1) !important;
+    }
+    .fish-text{
+        font-size: 80px;
+    }
+}
