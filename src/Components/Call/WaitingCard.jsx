@@ -12,7 +12,7 @@ function WaitingCard() {
                 loop
                 style={{width: "400px"}}
                 mode="normal"
-                src="/src/assets/animations/callLoading.json">
+                src='../../../src/assets/animations/callLoading.json'>
             </lottie-player>
             <button type="button" className="font-poppins w-fit text-white bg-red-500 px-5 py-2 h-fit cursor-pointer rounded-lg">
                 <span>Disconnect</span>

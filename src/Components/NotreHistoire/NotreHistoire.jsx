@@ -60,7 +60,7 @@ function NotreHistoire() {
             <SideText />
             <div className="max-w-[400px] w-full hover:animate-spin relative bg-blue-100 rounded-full p-4 bg-opacity-10">
               <img
-                src="/src/assets/notre-histoire/Ellipse 11.png"
+                src="../../../src/assets/notre-histoire/Ellipse 11.png"
                 className=" max-w-[408px] w-full"
                 alt=""
               />
