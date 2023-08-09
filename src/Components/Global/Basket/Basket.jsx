@@ -4,6 +4,7 @@ import { AppContext } from "../../../App";
 import BasketItem from "./BasketItem";
 import { loadStripe } from "@stripe/stripe-js";
 import { toast } from "react-toastify";
+import basketImage from '../../../assets/Basket-icons/basket.png'
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE);
 
@@ -69,7 +70,7 @@ function Basket() {
       >
         <div className="flex items-center gap-3 h-fit">
           <img
-            src="/src/assets/Basket-icons/basket.png"
+            src={basketImage}
             className="w-[50px] h-[40px] object-contain object-center"
           />
           <h2 className="text-4xl">Basket</h2>

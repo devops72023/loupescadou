@@ -10,7 +10,7 @@ import {
 import "../../assets/styles/video_call.css";
 import { AppContext } from "../../App";
 
-const VideoCall = ({socket, from}) => {
+const VideoCall = ({ setIsCalling, setIsAnswered, socket, from}) => {
   const [ isFullScreen, setIsFullScreen ] = useState(false);
   const [ isCameraOpen, setIsCameraOpen ] = useState(true);
   const [ isAudioOpen, setIsAudioOpen ] = useState(true);
@@ -59,12 +59,14 @@ const VideoCall = ({socket, from}) => {
   async function endCall() {
     const admin = await getAdmin();
     peer.current.close();
+    peer.current = null;
     streamRef.current.getTracks().forEach((track) => track.stop());
     local.current.srcObject = null;
     remote.current.srcObject = null;
-    setCallAccepted(false)
-    socket.emit("end-call", { from: socket.id, to: admin.socket });
-    window.location.reload();
+    setIsCalling(false)
+    setIsAnswered(false)
+    socket.emit("end-call", { to: admin.socket });
+    location.reload();
   }
 
   function stopAudio() {
@@ -102,6 +104,7 @@ const VideoCall = ({socket, from}) => {
       navigator.mediaDevices.getUserMedia(constraints).then(async stream => {
         local.current.srcObject = stream
         streamRef.current = stream
+        console.log(stream);
         stream.getTracks().forEach(track => {
             peer.current.addTrack(track, stream)
         })
@@ -134,6 +137,10 @@ const VideoCall = ({socket, from}) => {
     socket.on("candidate", ({ candidate }) => {
       peer.current.addIceCandidate(new RTCIceCandidate(candidate));
     });
+
+    socket.on('end-call', ()=>{
+      window.location.reload()
+    })
 
     const _pc = new RTCPeerConnection(null);
     _pc.onicecandidate = async (e) => {

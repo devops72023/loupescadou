@@ -67,13 +67,13 @@ function Product() {
     }, [])
   return (
     <div className='max-w-[1434px] w-[90%] flex- justify-center items-center mx-auto'>
-      <div className="glass w-full flex flex-col md:flex-row p-5 rounded-3xl">
-        <div className="w-full md:w-1/2 pt-8 items-center relative md:py-10" >
-          <img src={`${import.meta.env.VITE_ASSETS}/Products-images/${product.photo}`} alt="" />
+      <div className="glass w-full flex flex-col gap-4 md:flex-row p-5 rounded-3xl">
+        <div className="w-full pt-8 relative flex justify-center" >
+          <img src={`${import.meta.env.VITE_ASSETS}/Products-images/${product.photo}`} className='max-w-[400px] w-full rounded-xl h-fit object-cover object-center' />
           {/* <img src="/assets/fish-3.png" className="h-full object-contain w-5/6 mx-auto" /> */}
         </div>
 
-        <div className="flex flex-col md:items-start md:w-1/2 w-full space-y-4 md:space-y-3 px-3 md:px-0" >
+        <div className="flex flex-col md:items-start w-full space-y-4 md:space-y-3 px-3 md:px-0" >
 
           <h1 className="text-3xl font-semibold text-white" >{ product?.title   }</h1>
 
@@ -91,7 +91,7 @@ function Product() {
             </div>       
           </div>
 
-          <div className="flex flex-col items-start py-1 space-y-2" >
+          <div className="flex flex-col items-start py-1 space-y-2 w-full" >
             <p className="text-white" >Description</p>
 
             <p className="text-gray-100 text-xs" >

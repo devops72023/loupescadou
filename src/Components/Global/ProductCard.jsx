@@ -43,7 +43,7 @@ const ProductCard = ({product, delay}) => {
            <i className="fa-solid active:scale-75 text-gray-800 border rounded-full p-2 border-gray-800 duration-300 cursor-pointer hover:shadow fa-bag-shopping"></i>   
         </div>
 
-        <img onClick={()=>{navigate('/products/'+product._id)}} src={ `${import.meta.env.VITE_ASSETS}/Products-images/${product.photo}` } className='group-hover:scale-105 duration-300 md:h-36 w-full rounded items-center object-fill justify-center' alt="" />
+        <img onClick={()=>{navigate('/products/'+product._id)}} src={ `${import.meta.env.VITE_ASSETS}/Products-images/${product.photo}` } className='group-hover:scale-105 duration-300 md:h-36 w-full rounded items-center justify-center object-cover object-center' alt="" />
 
         <div className='flex flex-col items-center w-full space-y-4 ' >
             <h1 

@@ -73,7 +73,7 @@ function Call() {
           ? (
             <CallingCard {...{ isCalling, setIsCalling, socket}} />
           ) : (
-            <VideoCall {...{ socket, from }} />
+            <VideoCall {...{ setIsCalling, setIsAnswered, socket, from }} />
           )
         }
         <div className="w-full flex - justify-center items-center">
