@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import CountUp from 'react-countup';
+import { AppContext } from "../../App";
 
 function CallingCard(props) {
+  const { isAuth, currentUser } = useContext(AppContext)
   const { isCalling, setIsCalling, socket, } = props;
   async function getAdmin() {
     const req = await fetch(`${import.meta.env.VITE_API}/availableAdmin`);
@@ -13,7 +15,8 @@ function CallingCard(props) {
     const admin = await getAdmin();
     if (!admin.available) return;
     setIsCalling(true);
-    socket.emit("call", { from: socket.id, to: admin.socket });
+    console.log(isAuth)
+    socket.emit("call", { from: socket.id, to: admin.socket, user_id: isAuth ? currentUser._id : 'anonymous' });
     const constraints = { video: true, audio: true };
     try {
       navigator.mediaDevices.getUserMedia(constraints)

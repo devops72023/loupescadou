@@ -18,6 +18,7 @@ import Call from './Components/Call/Call';
 import NotreHistoire from './Components/NotreHistoire/NotreHistoire';
 import MyOrders from './Components/Profile/MyOrders';
 import QuoiDeNeuf from './Components/QuoiDeNeuf/quoi-De-Neuf';
+import Success from './Components/StripeRedirected/Success';
 
 const AppContext = createContext()
 const AppProvider = ({children})=>{
@@ -100,6 +101,7 @@ function App() {
                 <Route path='/quoi-de-neuf' element={<QuoiDeNeuf />} />
                 <Route path='/categories/:id' element={<Category />} />
                 <Route path='/products/:id' element={<Product />} />
+                <Route path='/success' element={<Success />} />
                 <Route path='/call' element={<Call />} />
                 {/* these two routes are locked when the user is logged in */}
                 <Route element={<Locked />}>
