@@ -12,8 +12,7 @@ import '../../assets/styles/Slider.css';
 // import '../../assets/styles/components.css';
 
 
-export default function QuoiDeNeuf() {
-
+export default function QuoiDeNeuf(){
   return (
     <div className='relative overflow-hidden w-full @container/quoi'>
 
