@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import paymentImage from '../../assets/payment.webp'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../../App';
 
 function Success() {
+    const { setLoaded } = useContext(AppContext)
+    useEffect(() => {
+        setLoaded(true)
+console.log("Loaded")
+      },[]);
   return (
     <div className="w-full flex justify-center items-center">
         <div className="glass max-w-[1434px] w-[90%] p-10 rounded-2xl flex flex-col md:flex-row">

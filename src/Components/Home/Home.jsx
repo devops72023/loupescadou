@@ -6,9 +6,10 @@ import PopularProducts from '../Global/ProductCard'
 
 function Home() {
   const { setLoaded } = useContext(AppContext)
-  useEffect(()=>{
-    setTimeout(()=>{setLoaded(true)},500)
-  })
+  useEffect(() => {
+    setLoaded(true)
+console.log("Loaded")
+  },[]);
   return (
     <div className='flex flex-col justify-center gap-12 mt-[136px]'>
       <CatgoriesCard />

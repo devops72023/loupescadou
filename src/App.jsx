@@ -50,16 +50,13 @@ const AppProvider = ({children})=>{
         if (res._id !== undefined) {
           setCurrentUser(res)
           setIsAuth(true);
-          setLoaded(true);
         }else{
           setIsAuth(false);
-          setLoaded(true);
         }
     })
     .catch(err => {
         console.error(err);
         setIsAuth(false);
-        setLoaded(true);
     });
   }
   useEffect(()=>{

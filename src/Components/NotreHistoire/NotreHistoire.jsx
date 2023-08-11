@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SideText from "./sideText";
 import image1 from '../../assets/notre-histoire/Ellipse 11.png'
+import { AppContext } from "../../App";
 
 function NotreHistoire() {
+  const { setLoaded } = useContext(AppContext)
   const [openText, setOpenText] = useState(false);
   const [openText2, setOpenText2] = useState(false);
   const [isImageOpened, setIsOpenedImage] = useState(false);
@@ -32,6 +34,10 @@ function NotreHistoire() {
     setOpenedImage("");
     setIsOpenedImage(false);
   };
+  useEffect(() => {
+    setLoaded(true)
+console.log("Loaded")
+  },[]);
   return (
     <div className="w-full flex justify-center items-center relative">
       {isImageOpened ? (
@@ -59,7 +65,7 @@ function NotreHistoire() {
         <div className="@container/histoire flex w-full h-fit gap-2">
           <div className="justify-evenly w-full md:px-8 flex flex-col gap-3 @[980px]/histoire:flex-row items-center">
             <SideText />
-            <div className="max-w-[400px] w-full hover:animate-spin relative bg-blue-100 rounded-full p-4 bg-opacity-10">
+            <div className="max-w-[400px] w-full hover:animate-spin-slow relative bg-blue-100 rounded-full p-4 bg-opacity-10">
               <img
                 src={image1}
                 className=" max-w-[408px] w-full"
@@ -96,11 +102,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00501.jpg`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00501.JPG`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00501.jpg`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00501.JPG`}
                   alt=""
                 />
               </div>
@@ -108,11 +114,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00502.jpg`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00502.JPG`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00502.jpg`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00502.JPG`}
                   alt=""
                 />
               </div>
@@ -120,11 +126,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00523.jpg`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00523.JPG`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00523.jpg`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00523.JPG`}
                   alt=""
                 />
               </div>
@@ -132,11 +138,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/IMG_8174.jpg`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/IMG_8174.JPG`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/IMG_8174.jpg`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/IMG_8174.JPG`}
                   alt=""
                 />
               </div>
@@ -146,11 +152,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00524.jpg`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00524.JPG`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00524.jpg`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00524.JPG`}
                   alt=""
                 />
               </div>
@@ -158,11 +164,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00526.jpg`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00526.JPG`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00526.jpg`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00526.JPG`}
                   alt=""
                 />
               </div>
@@ -170,11 +176,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00527.jpg`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00527.JPG`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00527.jpg`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00527.JPG`}
                   alt=""
                 />
               </div>
@@ -182,11 +188,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/IMG_8004.jpg`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/IMG_8004.JPG`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/IMG_8004.jpg`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/IMG_8004.JPG`}
                   alt=""
                 />
               </div>

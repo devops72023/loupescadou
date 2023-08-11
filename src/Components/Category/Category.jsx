@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ProductCard } from "../Global/ProductCard";
+import { AppContext } from "../../App";
 
 function Category() {
+  const { setLoaded } = useContext(AppContext)
   const [category, setCategory] = useState({});
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
@@ -174,6 +176,10 @@ function Category() {
         }
       });
   }, [params.id]);
+  useEffect(() => {
+    setLoaded(true)
+console.log("Loaded")
+  },[]);
   return (
     <div className="flex flex-col gap-5 justify-center items-center font-dancing text-white">
       <div className="glass px-5 py-5 rounded-xl max-w-[1434px] w-[90%] flex gap-3 justify-between flex-col-reverse md:flex-row">

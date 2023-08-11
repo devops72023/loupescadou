@@ -1,13 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import PositionPicker from "./PositionPicker";
 import CallingCard from "./CallingCard";
 import VideoCall from "./VideoCall";
 import WaitingCard from "./WaitingCard";
 import { Manager } from 'socket.io-client'
 import Chat from "./Chat";
+import { AppContext } from "../../App";
 
 const manager = new Manager(import.meta.env.VITE_SOCKET)
 function Call() {
+  const { setLoaded } = useContext(AppContext)
   const socket = manager.socket('/')
   const [isCalling, setIsCalling] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -63,7 +65,8 @@ function Call() {
       }
     });
 
-    
+    setLoaded(true)
+console.log("Loaded")
   }, []);
   return (
     <div className="w-full flex justify-center items-center">

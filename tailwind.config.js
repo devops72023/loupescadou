@@ -43,6 +43,9 @@ export default {
           900: "#0b1526"
 },
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }
     },
   },
   plugins: [

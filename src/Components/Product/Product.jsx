@@ -4,7 +4,7 @@ import { AppContext } from '../../App'
 import { motion } from 'framer-motion'
 
 function Product() {
-    const { setIsBasketOpen, basket, setBasket } = useContext(AppContext)
+    const { setIsBasketOpen, basket, setBasket, setLoaded } = useContext(AppContext)
     const [ product, setProduct ] = useState({})
     const [ count, setCount ] = useState(0)
     const [percent, setPercent ] = useState('100')
@@ -64,6 +64,8 @@ function Product() {
             setProduct(res.product)
             setPercent((res.product.sold / (res.product.quantity + res.product.sold)) * 100)
         })
+        setLoaded(true)
+console.log("Loaded")
     }, [])
   return (
     <div className='max-w-[1434px] w-[90%] flex- justify-center items-center mx-auto'>

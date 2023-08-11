@@ -3,6 +3,8 @@ import SliderMobile from "./Slider/SliderMobile";
 import Slider from "./Slider/Slider";
 
 import '../../assets/styles/Slider.css';
+import { AppContext } from "../../App";
+import { useContext, useEffect } from "react";
 // import '../../assets/styles/slide.css';
 // import '../../assets/styles/SideText.css';
 // import '../../assets/styles/quoiDeNeuf.css';
@@ -13,6 +15,11 @@ import '../../assets/styles/Slider.css';
 
 
 export default function QuoiDeNeuf(){
+  const { setLoaded } = useContext(AppContext);
+  useEffect(() => {
+    setLoaded(true)
+    console.log("Loaded")
+  },[]);
   return (
     <div className='relative overflow-hidden w-full @container/quoi'>
 
