@@ -33,7 +33,7 @@ const ProductCard = ({product, delay}) => {
         animate={{scale: 1, opacity: 1}}
         transition={{duration: .3, delay: delay}}
         data-aos="zoom-in"
-        className='group item h-full max-h-[410px] mx-auto cursor-pointer glass space-y-4 shadow-lg duration-300 p-4 w-full rounded-3xl max-w-[300px]' 
+        className='group item h-fit mx-auto cursor-pointer glass space-y-4 shadow-lg duration-300 p-4 w-full rounded-3xl max-w-[300px]' 
     >
         <div onClick={() => {}} className='flex items-center justify-between w-full ' >
           <div className='flex items-center space-x-2' >
@@ -69,7 +69,7 @@ function PopularProducts() {
     },[])
     return (
         <motion.div
-            className="flex flex-col justify-center gap-4 text-center font-dancing text-white">
+            className="flex flex-col max-w-[1434px] mx-auto w-[90%] justify-center gap-4 text-center font-dancing text-white">
             <h2 className="text-6xl">
                 Le Plus Populaire
             </h2>
@@ -78,7 +78,7 @@ function PopularProducts() {
                 className="flex w-full @container/popular">
                 {
                     popularInView
-                    ? <ul className='w-full font-poppins place-items-center text-white flex flex-wrap flex-row justify-center gap-3 px-2 h-fit py-3' >
+                    ? <ul className='w-full font-poppins place-items-center text-white flex flex-wrap flex-row justify-stretch gap-3 px-2 h-fit py-3' >
                         { products.map((product, index) => <ProductCard key={index} product={product} delay={0.3 * index} />)}
                     </ul>
                     : ''
