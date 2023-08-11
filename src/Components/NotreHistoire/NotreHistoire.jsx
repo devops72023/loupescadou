@@ -96,11 +96,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00501.JPG`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00501.jpg`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00501.JPG`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00501.jpg`}
                   alt=""
                 />
               </div>
@@ -108,11 +108,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00502.JPG`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00502.jpg`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00502.JPG`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00502.jpg`}
                   alt=""
                 />
               </div>
@@ -120,11 +120,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00523.JPG`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00523.jpg`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00523.JPG`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00523.jpg`}
                   alt=""
                 />
               </div>
@@ -132,11 +132,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/IMG_8174.JPG`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/IMG_8174.jpg`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/IMG_8174.JPG`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/IMG_8174.jpg`}
                   alt=""
                 />
               </div>
@@ -146,11 +146,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00524.JPG`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00524.jpg`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00524.JPG`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00524.jpg`}
                   alt=""
                 />
               </div>
@@ -158,11 +158,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00526.JPG`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00526.jpg`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00526.JPG`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00526.jpg`}
                   alt=""
                 />
               </div>
@@ -170,11 +170,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00527.JPG`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/DSC00527.jpg`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00527.JPG`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/DSC00527.jpg`}
                   alt=""
                 />
               </div>
@@ -182,11 +182,11 @@ function NotreHistoire() {
                 <img
                   onClick={() => {
                     openImage(
-                      `${import.meta.env.VITE_ASSETS}/Histoire/IMG_8004.JPG`
+                      `${import.meta.env.VITE_ASSETS}/Histoire/IMG_8004.jpg`
                     );
                   }}
                   class="h-auto transition-300 hover:scale-[1.05] cursor-pointer rounded-lg"
-                  src={`${import.meta.env.VITE_ASSETS}/Histoire/IMG_8004.JPG`}
+                  src={`${import.meta.env.VITE_ASSETS}/Histoire/IMG_8004.jpg`}
                   alt=""
                 />
               </div>
