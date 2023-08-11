@@ -4,6 +4,7 @@ import CallingCard from "./CallingCard";
 import VideoCall from "./VideoCall";
 import WaitingCard from "./WaitingCard";
 import { Manager } from 'socket.io-client'
+import Chat from "./Chat";
 
 const manager = new Manager(import.meta.env.VITE_SOCKET)
 function Call() {
@@ -73,7 +74,10 @@ function Call() {
           ? (
             <CallingCard {...{ isCalling, setIsCalling, socket}} />
           ) : (
-            <VideoCall {...{ setIsCalling, setIsAnswered, socket, from }} />
+            <>
+              <VideoCall {...{ setIsCalling, setIsAnswered, socket, from }} />
+              <Chat {...{ setIsCalling, setIsAnswered, socket, from }} />
+            </>
           )
         }
         <div className="w-full flex - justify-center items-center">

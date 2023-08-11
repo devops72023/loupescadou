@@ -157,6 +157,10 @@ const VideoCall = ({ setIsCalling, setIsAnswered, socket, from}) => {
       remote.current.srcObject = e.streams[0];
     };
     peer.current = _pc;
+
+    return ()=>{
+      location.reload();
+    };
   }, []);
 
   return (
