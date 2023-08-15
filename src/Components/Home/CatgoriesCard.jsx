@@ -24,7 +24,7 @@ const Card = ({ category, animatedFish, setAnimatedFish, one = false }) => {
       <img
         src={`${import.meta.env.VITE_ASSETS}/Category-images/${category.image}`}
         alt=""
-        className={one ? "max-w-[400px]" : ""}
+        className={one ? "max-w-[400px] w-full" : ""}
       />
       <h3 className="text-white text-4xl">{category.name}</h3>
       <p className="text-white text-lg line-clamp-3">{category.description}</p>
@@ -74,7 +74,7 @@ function CatgoriesCard() {
     }
   }, [categories]);
   return (
-    <div className="flex flex-col gap-16 w-full justify-center py-16">
+    <div className="flex flex-col gap-8 w-full justify-center px-[20px] md:py-16 md:px-0">
       <h1 className="text-white text-7xl font-dancing text-center">
         Meilleur site de poisson en France
       </h1>

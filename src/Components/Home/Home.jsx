@@ -11,7 +11,7 @@ function Home() {
 console.log("Loaded")
   },[]);
   return (
-    <div className='flex flex-col justify-center gap-12 mt-[136px]'>
+    <div className='flex flex-col justify-center gap-12 mt-4'>
       <CatgoriesCard />
       <AboutUs />
       <PopularProducts />

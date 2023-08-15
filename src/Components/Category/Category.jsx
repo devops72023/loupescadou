@@ -5,7 +5,7 @@ import { ProductCard } from "../Global/ProductCard";
 import { AppContext } from "../../App";
 
 function Category() {
-  const { setLoaded } = useContext(AppContext)
+  const { setLoaded } = useContext(AppContext);
   const [category, setCategory] = useState({});
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
@@ -109,30 +109,29 @@ function Category() {
     setProducts(prds);
     console.log(prds);
   };
-  
+
   const sort = (by) => {
     switch (by) {
-        case 'Ascending':
-            ascendingSort()
-            break;
-        case 'Descending':
-            descendingSort()
-            break;
-        case 'Le plus Récent':
-            sortByNew()
-            break;
-        case 'Prix ​​élevé':
-            sortHighPrice()
-            break;
-        case 'Prix ​​Bas':
-            sortLowPrice()
-            break;
-        case 'Le Plus Ancien':
-            sortByOlder()
-            break;
-
+      case "Ascending":
+        ascendingSort();
+        break;
+      case "Descending":
+        descendingSort();
+        break;
+      case "Le plus Récent":
+        sortByNew();
+        break;
+      case "Prix ​​élevé":
+        sortHighPrice();
+        break;
+      case "Prix ​​Bas":
+        sortLowPrice();
+        break;
+      case "Le Plus Ancien":
+        sortByOlder();
+        break;
     }
-  }
+  };
   const handleSearch = (e) => {
     setSearch(e.target.value);
     fetch(
@@ -177,9 +176,9 @@ function Category() {
       });
   }, [params.id]);
   useEffect(() => {
-    setLoaded(true)
-console.log("Loaded")
-  },[]);
+    setLoaded(true);
+    console.log("Loaded");
+  }, []);
   return (
     <div className="flex flex-col gap-5 justify-center items-center font-dancing text-white">
       <div className="glass px-5 py-5 rounded-xl max-w-[1434px] w-[90%] flex gap-3 justify-between flex-col-reverse md:flex-row">
@@ -206,7 +205,7 @@ console.log("Loaded")
       <div className="flex justify-center item-center @container/filters w-full">
         <div className="max-w-[1434px] w-[90%] glass rounded-xl flex flex-col gap-5 p-5 md:flex-row">
           {/* The side bar */}
-          <div className="flex flex-col gap-3 max-w-[350px] w-full border-r border-r-pink-500 pr-5">
+          <div className="flex flex-col gap-3 md:max-w-[350px] w-full border-b border-b-pink-500 pb-5 md:border-b-transparent md:border-r md:border-r-pink-500 md:pr-5">
             <div className="flex border-b pb-3 text-4xl w-full">
               Filtrer par:
             </div>
@@ -228,8 +227,11 @@ console.log("Loaded")
                 <div className="gap-3 flex flex-wrap ">
                   {sortsBy.map((item) => (
                     <div
-                        onClick={() => {sort(item)}} 
-                        className="glass px-3 py-1 rounded-md cursor-pointer transition-500 hover:bg-dark-blue-500 hover:bg-opacity-50 backdrop-blur-md">
+                      onClick={() => {
+                        sort(item);
+                      }}
+                      className="glass px-3 py-1 rounded-md cursor-pointer transition-500 hover:bg-dark-blue-500 hover:bg-opacity-50 backdrop-blur-md"
+                    >
                       {item}
                     </div>
                   ))}
@@ -238,23 +240,23 @@ console.log("Loaded")
             </div>
             <div className="flex flex-col gap-3 font-poppins">
               <div className="text-white text-xl">Autre Categories</div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 @[400px]/filters:flex-row">
                 {categories.map((cat) => {
                   if (cat._id != category._id) {
                     return (
                       <Link
                         to={`/categories/${cat._id}`}
                         whileTap={{ scale: 0.9 }}
-                        className="flex justify-center items-center text-center flex-col cursor-pointer max-w-[150px] glass px-3 py-2 rounded-md hover:scale-[.9] transition-300"
+                        className="flex gap-3 @[400px]/filters:justify-center items-center text-center  @[400px]/filters:flex-col cursor-pointer  @[400px]/filters:max-w-[150px] w-full glass px-3 py-2 rounded-md hover:scale-[.95] transition-300"
                       >
                         <img
                           src={`${
                             import.meta.env.VITE_ASSETS
                           }/Category-images/${cat.image}`}
-                          className="max-w-[120px]"
+                          className="max-w-[120px] max-h-[50px] md:max-h-full"
                         />
                         <div className="text-md">{cat.name}</div>
-                        <div className="text-sm line-clamp-2 text-gray-300">
+                        <div className="text-sm line-clamp-2 text-gray-300 hidden  @[400px]/filters:flex">
                           {cat.title}
                         </div>
                       </Link>
