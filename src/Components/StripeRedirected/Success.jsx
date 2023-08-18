@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import paymentImage from '../../assets/payment.webp'
 import { Link } from 'react-router-dom'
 import { AppContext } from '../../App';
@@ -7,7 +7,6 @@ function Success() {
     const { setLoaded } = useContext(AppContext)
     useEffect(() => {
         setLoaded(true)
-console.log("Loaded")
       },[]);
   return (
     <div className="w-full flex justify-center items-center">
