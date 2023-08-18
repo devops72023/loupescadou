@@ -11,6 +11,7 @@ import "../../assets/styles/video_call.css";
 import { AppContext } from "../../App";
 
 const VideoCall = ({ setIsCalling, setIsAnswered, socket, from}) => {
+  const { position, setPosition } = useContext(AppContext);
   const [ isFullScreen, setIsFullScreen ] = useState(false);
   const [ isCameraOpen, setIsCameraOpen ] = useState(true);
   const [ isAudioOpen, setIsAudioOpen ] = useState(true);
@@ -122,11 +123,22 @@ const VideoCall = ({ setIsCalling, setIsAnswered, socket, from}) => {
     } catch (err) {
       console.log(err);
     }
+    
+    
     socket.on("sdp", ({ sdp }) => {
         console.log(peer.current)
       if(peer.current.signalingState == 'have-local-offer'){peer.current.setRemoteDescription(new RTCSessionDescription(sdp))
-      .then(() => {
+      .then(async () => {
         // Do something after successfully setting the remote description
+        const admin = await getAdmin();
+        
+        if (position){
+          socket.emit("position", {
+            from: socket.id,
+            to: admin.socket,
+            position: position,
+          });
+        }
       })
       .catch((error) => {
         console.error("Error setting remote description:", error);

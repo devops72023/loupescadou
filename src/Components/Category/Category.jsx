@@ -181,7 +181,7 @@ function Category() {
   }, []);
   return (
     <div className="flex flex-col gap-5 justify-center items-center font-dancing text-white">
-      <div className="glass px-5 py-5 rounded-xl max-w-[1434px] w-[90%] flex gap-3 justify-between flex-col-reverse md:flex-row">
+      <div className="glass px-5 py-5 rounded-xl max-w-[1434px] w-[90%] flex gap-3 justify-between flex-col-reverse md:flex-row ">
         <div className="flex flex-col text-center justify-center items-center gap-3 w-full">
           <h1 className="text-7xl">{category && category.name}</h1>
           <p className="text-lg">{category && category.title}</p>
@@ -202,7 +202,7 @@ function Category() {
         </div>
       </div>
 
-      <div className="flex justify-center item-center @container/filters w-full">
+      <div className="flex justify-center item-center @container/filters w-full" id="products">
         <div className="max-w-[1434px] w-[90%] glass rounded-xl flex flex-col gap-5 p-5 md:flex-row">
           {/* The side bar */}
           <div className="flex flex-col gap-3 md:max-w-[350px] w-full border-b border-b-pink-500 pb-5 md:border-b-transparent md:border-r md:border-r-pink-500 md:pr-5">

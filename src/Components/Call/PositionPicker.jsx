@@ -19,8 +19,8 @@ function PositionPicker({ POSITION = {}, className }) {
       .then((google) => {
         const map = new google.maps.Map(mapRef.current, {
           center: {
-            lat: POSITION.latitude,
-            lng: POSITION.longitude,
+            lat: POSITION?.latitude,
+            lng: POSITION?.longitude,
           },
           zoom: 14,
         });
@@ -29,11 +29,10 @@ function PositionPicker({ POSITION = {}, className }) {
         });
 
         const latlng = new google.maps.LatLng(
-          POSITION.latitude,
-          POSITION.longitude
+          POSITION?.latitude,
+          POSITION?.longitude
         );
         marker.setPosition(latlng);
-        console.log(marker);
         markerRef.current = marker;
       })
       .catch((error) => {

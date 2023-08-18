@@ -10,14 +10,10 @@ export default function SideText({ title, slogan, para }) {
       </h1>
 
       <p className="text-sm md:text-lg leading-9 font text-gray-200 w-full font-poppins line-clamp-[11]">
-        Plongez dans notre sélection de poissons frais en ligne ! Lou Pescadou
-        vous propose une sélection exceptionnelle de poissons frais et de fruits
-        de mer de qualité supérieure, livrés directement chez vous. Notre
-        processus de commande en ligne est simple et rapide. Vous pouvez
-        facilement parcourir notre sélection de produits frais, ajouter des
-        articles à votre panier, et passer votre commande en quelques clics
-        seulement. Nous offrons également une livraison rapide et fiable pour
-        assurer la fraîcheur de nos produits.
+      L'histoire du Lou Pescadou, c'est avant tout l'histoire d'une famille, la famille Riba.
+      Depuis aussi longtemps que nous pouvons nous en rappeler, c'est à dire jusqu'aux années 1870, nous avons toujours été "ancrés" dans la pêche et la navigation, pardonnez le jeu de mots.
+      Nos aïeux étaient déjà des amoureux de la Mer, et c'est dans notre berceau, à La Ciotat, qu'ils ont démarré leur activité de pêche.
+
       </p>
 
       <button className="flex items-center space-x-4 font-poppins">

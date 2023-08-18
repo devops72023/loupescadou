@@ -9,15 +9,12 @@ import { AppContext } from "../../App";
 
 const manager = new Manager(import.meta.env.VITE_SOCKET)
 function Call() {
-  const { setLoaded } = useContext(AppContext)
+  const { setLoaded, position, setPosition } = useContext(AppContext)
   const socket = manager.socket('/')
   const [isCalling, setIsCalling] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
   const [ from, setFrom ] = useState('');
-  const [position, setPosition] = useState({
-    latitude: 48.80846517371648,
-    longitude: 2.530080114268687,
-  });
+  const [ localisation, setLocalisation] = useState(null);
 
 
   async function getAdmin() {
@@ -38,11 +35,6 @@ function Call() {
               latitude,
               longitude,
             };
-          });
-          socket.emit("position", {
-            from: socket.id,
-            to: admin.socket,
-            position: { latitude, longitude },
           });
         },
 
@@ -66,8 +58,7 @@ function Call() {
     });
 
     setLoaded(true)
-console.log("Loaded")
-  }, []);
+  }, [localisation]);
   return (
     <div className="w-full flex justify-center items-center">
       <div className="w-[90%] max-w-[1434px] flex justify-center items-center md:items-stretch gap-5 mx-auto py-8 px-4 flex-col md:flex-row">
@@ -84,10 +75,14 @@ console.log("Loaded")
           )
         }
         <div className="w-full flex - justify-center items-center">
-          <PositionPicker
-            POSITION={position}
-            className="w-full aspect-[5/4] max-w-[400px] rounded-lg"
-          />
+          {
+            position
+            ? <PositionPicker
+              POSITION={position}
+              className="w-full aspect-[5/4] max-w-[400px] rounded-lg"
+              />
+            : <div className="w-full aspect-[5/4] max-w-[400px] rounded-lg bg-white flex justify-center items-center cursor-pointer " onClick={()=>{setLocalisation(Math.random())}}>Autoriser localisation</div>
+          }
         </div>
       </div>
     </div>

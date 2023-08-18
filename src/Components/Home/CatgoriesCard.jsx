@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import useMeasure from "react-use-measure";
+import fraisImage from './../../assets/100frais.png';
 
 const Card = ({ category, animatedFish, setAnimatedFish, one = false }) => {
   const card = useRef();
@@ -24,24 +25,27 @@ const Card = ({ category, animatedFish, setAnimatedFish, one = false }) => {
       <img
         src={`${import.meta.env.VITE_ASSETS}/Category-images/${category.image}`}
         alt=""
-        className={one ? "max-w-[400px] w-full" : ""}
+        className={one ? "max-w-[400px] w-full" : "max-h-[150px] object-contain"}
       />
       <h3 className="text-white text-4xl">{category.name}</h3>
-      <p className="text-white text-lg line-clamp-3">{category.description}</p>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={3}
-        stroke="currentColor"
-        className="w-8 h-8 mx-auto text-white "
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-        />
-      </svg>
+      <p className="text-white line-clamp-2 text-md">{category.description}</p>
+      <button className="text-white flex justify-center items-center font-poppins font-bold gap-3 glass px-3 py-2 rounded-lg">
+        Découvrire 
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={3}
+          stroke="currentColor"
+          className="w-8 h-8 text-white "
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
     </Link>
   );
 };
@@ -74,12 +78,13 @@ function CatgoriesCard() {
     }
   }, [categories]);
   return (
-    <div className="flex flex-col gap-8 w-full justify-center px-[20px] md:py-16 md:px-0">
-      <h1 className="text-white text-7xl font-dancing text-center">
+    <div className="max-w-[1434px] flex flex-col gap-2 sm:gap-4 md:gap-4 w-[90%] mx-auto justify-center px-[20px] md:py-16 md:px-0">
+      <h1 className="text-white text-3xl sm:text-5xl md:text-7xl font-dancing text-center">
         Meilleur site de poisson en France
       </h1>
       <div className="w-full justify-center @container/cats">
-        <div className="flex gap-3 w-full justify-center px-2" ref={ref}>
+        <div className="flex gap-3 w-full justify-center px-2" ref={ref} relative>
+          <img src={fraisImage} className="absolute z-10 w-[100px] left-0 top-0 md:-top-[75px] md:-left-[75px] md:w-[150px]" />
           {bounds.width < 800 ? (
             <Card
               category={animatedFish}

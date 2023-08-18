@@ -1,0 +1,16 @@
+.swiper {
+    overflow: visible !important;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+.swipder-wrpper{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.swiper-slide-active{
+    width: 90% !important;
+    filter: none !important;
+}

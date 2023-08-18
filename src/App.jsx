@@ -27,6 +27,7 @@ const AppProvider = ({children})=>{
   const [ currentUser, setCurrentUser ] = useState({})
   const [ loaded, setLoaded ] = useState(false)
   const [ isBasketOpen, setIsBasketOpen ] = useState(false)
+  const [ position, setPosition ] = useState(null)
   const oldState = JSON.parse(localStorage.getItem('state')) || [];
   const [ basket, setBasket ] = useState(oldState)
 
@@ -36,6 +37,7 @@ const AppProvider = ({children})=>{
     currentUser,setCurrentUser,
     loaded,setLoaded,
     isBasketOpen,setIsBasketOpen,
+    position,setPosition,
     basket,setBasket,
   }
 
@@ -89,7 +91,7 @@ function App() {
 
         <ToastContainer />
 
-        <AnimatePresence>
+        <AnimatePresence mode='wait'>
           <Routes>
             <Route element={<BackgroundLayout />}>
               <Route element={<NavbarLayout />}>
