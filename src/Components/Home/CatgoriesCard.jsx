@@ -30,7 +30,7 @@ const Card = ({ category, animatedFish, setAnimatedFish, one = false }) => {
       <h3 className="text-white text-4xl">{category.name}</h3>
       <p className="text-white line-clamp-2 text-md">{category.description}</p>
       <button className="text-white flex justify-center items-center font-poppins font-bold gap-3 glass px-3 py-2 rounded-lg">
-        Découvrire 
+        Découvrir
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
