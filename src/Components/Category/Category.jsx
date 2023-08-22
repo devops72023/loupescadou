@@ -189,7 +189,7 @@ function Category() {
             to="#products"
             className="border rounded-md px-5 py-2 font-poppins w-fit "
           >
-            Let's see
+            Aller voir
           </Link>
         </div>
         <div className="flex w-full">

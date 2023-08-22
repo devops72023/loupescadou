@@ -54,14 +54,15 @@ function AboutUs() {
               animate={paragraphInView ? rightFadeIn : {}}
               className="text-lg text-justify md:text-left lg:text-3xl xl:text-4xl px-4 m-auto text-dark-blue-400 font-dancing"
             >
-              Plongez dans notre sélection de poissons frais en ligne ! Lou
-              Pescadou vous propose une sélection exceptionnelle de poissons frais
-              et de fruits de mer de qualité supérieure, livrés directement chez
-              vous. Notre processus de commande en ligne est simple et rapide.
-              Vous pouvez facilement parcourir notre sélection de produits frais,
-              ajouter des articles à votre panier, et passer votre commande en
-              quelques clics seulement. Nous offrons également une livraison
-              rapide et fiable pour assurer la fraîcheur de nos produits.
+              De l'étal aux plats cuisinés, des produits authentiques !
+              Chez Lou Pescadou, votre poissonnier-traiteur à La
+              Ciotat, nous travaillons sans relâche à développer une
+              multitude de produits ayant pour point commun la Mer.
+              Outre notre magnifique étal de poissons fraîchement
+              pêchés, vous trouverez des plat typiques
+              méditerranéens tels que la paella aux fruits de mer, les
+              encornets farcis, la salade de poulpe ou encore les
+              cannelloni aux fruits de mer.
               <Link to="/notre-histoire" className="underline text-[#79c8f5] text-2xl">
                 Voir Plus.
               </Link>

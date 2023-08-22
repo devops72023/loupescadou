@@ -60,7 +60,7 @@ function NotreHistoire() {
               className="flex flex-col gap-5 glass max-w-[500px] w-full h-fit p-5 rounded-xl overflow-hidden"
             >
               <h1 className="text-white font-dancing text-center w-full text-3xl flex justify-between">
-                Lou-Pescadou <i onClick={()=>{setIsOpenedImage(false)}} className="fas fa-close text-white text-lg cursor-pointer hover:text-2xl transition-300 w-[40px] h-[40px] rounded-full flex justify-center items-center"></i>
+                Lou Pescadou <i onClick={()=>{setIsOpenedImage(false)}} className="fas fa-close text-white text-lg cursor-pointer hover:text-2xl transition-300 w-[40px] h-[40px] rounded-full flex justify-center items-center"></i>
               </h1>
               <img src={openedImage} className="rounded-lg" />
             </motion.div>
@@ -77,7 +77,7 @@ function NotreHistoire() {
         </div>
         
         <h1 className="text-5xl font-dancing text-white text-center py-5">
-          Lou Pescadou, une histoire de générations
+          Une évolution continuelle
         </h1>
         <div className="flex gap-6 flex-col-reverse md:flex-row justify-center items-start glass p-5 rounded-2xl">
           <Slider
@@ -88,10 +88,15 @@ function NotreHistoire() {
           <div className="flex flex-col gap-4 w-full h-full text-white font-poppins">
             <p
             >
-              André Riba, celui que beaucoup appelaient "Dédé", était le grand père de Pierre-Marc Riba. À 18 ans déjà, il menait des chalutiers, et c'est en 1952 qu'il démarre son activité de pêche conjointement avec son beau-père, Michel Passera, et leur barque, le Michel-Pierre.
-              Vendant d'abord leur pêche quotidienne sur les quais du port de La Ciotat, ils décident en 1958 d'ouvrir leur point de vente sobrement intitulé "Chez Dédé".
-              Rapidement, ils achètent plusieurs barques successives, puis font construire en 1966 le Pierre-Michel, leur premier chalutier de 16 mètres.
-              C'est enfin en 1967 que notre cher Lou Pescadou voit le jour dans la célèbre rue des Poilus, à La Ciotat.
+              En 2009 et 2013, Pierre-Marc et son père ouvrirent deux nouveaux points de vente, afin d'étendre
+              leur activité. <br />
+              La Maison de la Mer, première créée et aujourd’hui cédée, s'établit à Saint-Cyr-sur-Mer, ville
+              voisine de La Ciotat, tandis qu'un second Lou Pescadou est ouvert à La Ciotat, dans une halle
+              marchande où sont rassemblés plusieurs commerçants connus dans la ville.
+              Dans nos deux poissonneries, nous proposons les produits de notre pêche quotidienne, que ce
+              soient des lottes, des bars, des grondins, ou alors, comme nous les appelons ici, des baudroies,
+              des loups et des galinettes. Des daurades royales aux rougets, beaucoup de merveilles de la Mer,
+              au goût exceptionnel, sont présentes sur notre étal.
             </p>
           </div>
         </div>
@@ -104,10 +109,30 @@ function NotreHistoire() {
           <div className="flex flex-col gap-4 w-full h-full text-white font-poppins">
             <p
             >
-              Pierre Riba suit les traces de son père André, et démarre très tôt la pêche à l'âge de 8 ans. A 14 ans, il est déjà en train de mener le Pierre-Michel, et ce ne sont pas les périodes de mauvais temps en mer qui l'effraient.
-            Avec son père, il fait construire en 1975 le Méditerranée, puis en 1977, le Marie-Michel, premier chalutier en fibre de verre et résine de 25 mètres, et en 1981, le Pierre-Marc, un chalutier de 21 mètres en l'honneur de son fils.
-            Enfin, en 1998, Pierre Riba fait construire le Marie-Pierre-André, notre chalutier actuel de 18,5 mètres, spécialement étudié pour la pêche au large de La Ciotat.
-            Ses caractéristiques nous permettent une pêche sélective, avec des "coups de chalut très courts", comme l'explique si bien Pierre, dans des fonds riches d’épaves.
+              Pierre-Marc Riba, ayant aussi suivi une formation de cuisinier, a rapidement cherché à développer
+              des plats autour des produits de la Mer. Encornets farcis, cannelés au crabe, thon à la catalane,
+              beaucoup de plats typiques sont élaborés ou revisités par le Lou Pescadou. <br />
+              La plus célèbre de ces spécialités reste la paella aux fruits de mer, dont la belle odeur aux accents
+              safranés parcourt la rue des Poilus, et enchante les touristes estivants. <br />
+              Pierre-Marc a aussi développé une recette de soupe de poissons, qu'il fabrique aujourd'hui dans
+              son laboratoire de La Maison de la Mer, et grâce à la pêche quotidienne de son père. Un produit
+              100% maison, en somme.
+            </p>
+          </div>
+        </div>
+        <div className="flex glass p-5 rounded-2xl">
+          <div className="flex flex-col gap-4 w-full h-full text-white font-poppins">
+            <p
+            >
+              Aujourd'hui, il cherche à correspondre aux nouvelles habitudes de la clientèle et aux nouveaux
+              modes de consommation, et il peut pour cela compter sur son fils Anthony, qui a suivi des études
+              de commerce et qui a ce que les jeunes aiment appeler...le regard jeune. <br />
+              Anthony a ainsi développé les ventes promotionnelles par messages et la présence sur Internet,
+              et assiste son père pour améliorer la communication de la société à travers la ville, la région et
+              plus encore. <br />
+              Ensemble, Pierre-Marc et Anthony développent l'activité d'avitaillement de yachts, que le Lou
+              Pescadou a démarré il y a une dizaine d'années.
+              Ainsi, l'évolution du Lou Pescadou, c'est avant tout une histoire de générations.
             </p>
           </div>
         </div>

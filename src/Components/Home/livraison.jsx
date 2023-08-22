@@ -32,8 +32,8 @@ function Livraison() {
         <div className="w-full flex flex-col justify-center items-center gap-3 @[516px]/livraison:flex-row">
             <div className="flex w-full justify-center items-center @container/icons">
                 <div className="flex flex-col @[440px]/icons:flex-row  gap-3">
-                    <Icon icon={icon1} title='Offres flexibles' text='Commandes au détail ou abonnement' />
-                    <Icon icon={icon2} title='Poisson ultra frais' text='Variété de poisson selon arrivages' />
+                    <Icon icon={icon1} title='Produits de qualité' text='Savoir faire et produits haut-de-gamme' />
+                    <Icon icon={icon2} title='Pêche ultra fraîche' text='Variété de poisson selon arrivages' />
                 </div>
             </div>
             <div className="flex mx-auto relative w-full max-w-[280px]">
