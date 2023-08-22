@@ -15,10 +15,10 @@ export default function SideText({ title, slogan, para }) {
       Nos aïeux étaient déjà des amoureux de la Mer, et c'est dans notre berceau, à La Ciotat, qu'ils ont démarré leur activité de pêche.
       </p>
 
-      <button className="flex items-center space-x-4 font-poppins">
+      {/* <button className="flex items-center space-x-4 font-poppins">
         <i className="fa-solid fa-circle-play text-3xl text-blue-600" />
         <p className="text-gray-800 font-semibold">Comment Commander</p>
-      </button>
+      </button> */}
     </div>
   );
 }

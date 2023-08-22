@@ -84,7 +84,7 @@ function CatgoriesCard() {
       </h1>
       <div className="w-full justify-center @container/cats">
         <div className="flex gap-3 w-full justify-center px-2" ref={ref} relative>
-          <img src={fraisImage} className="absolute z-10 w-[100px] left-0 top-0 md:-top-[75px] md:-left-[75px] md:w-[150px]" />
+          <img src={fraisImage} className="absolute z-10 w-[100px] left-0 -rotate-[30deg] top-0 md:-top-[75px] md:-left-[75px] md:w-[150px]" />
           {bounds.width < 800 ? (
             <Card
               category={animatedFish}

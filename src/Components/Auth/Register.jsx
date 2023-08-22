@@ -110,7 +110,7 @@ const Register = () => {
             <div className="flex flex-col gap-1">
                 <input
                 type="text"
-                placeholder="Nom Complete"
+                placeholder="Nom complet"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
                 className="w-full px-4 py-2 outline-none border-non rounded-md text-white placeholder:text-white glass"

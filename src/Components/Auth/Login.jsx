@@ -106,7 +106,7 @@ const Login = () => {
           className={` ${activeTab == "Sinscrire" && "bg-white text-dark-blue-500 shadow-2xl"} w-full transition-300 h-fit px-8 py-3  rounded-xl rounded-l-none hover:bg-white hover:text-dark-blue-500 hover:shadow-3xl `}
         >
           <h4 className="font-dancing">
-            Sinscrire
+            S'inscrire
           </h4>
         </Link>
       </div>
