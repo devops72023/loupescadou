@@ -21,7 +21,7 @@ function Menu() {
             <div className="max-w-[1434px] w-[90%] mx-auto h-[60px] bg-black bg-opacity-70 backdrop-blur-md rounded-2xl flex items-center justify-between mt-3 p-0 shadow-xl">
                 <div className="h-[60px] bg-white rounded-2xl">
                     <Link to="/">
-                        <img src={logo}className="w-full h-[60px]" />
+                        <img src={logo}className="w-full h-[60px] max-w-[106.66px]" />
                     </Link>
                 </div>
 
